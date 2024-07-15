@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-	<script src="index.js">
-		document.addEventListener('keydown', (event) => {
-		  var keyValue = event.key;
-		  var codeValue = event.code;
-		  console.log("keyValue: " + keyValue);
-		  console.log("codeValue: " + codeValue);
-		}, false);
-		
-	</script>
+
+	  <input type="text" onkeydown="checkKeyPressed(event)">
+	  <p id="keyPressed"></p>
 
     Hello
+	<script src="index.js">
+	
+		function checkKeyPressed(event) {
+		  var keyValue = event.key;
+		 document.getElementById("keyPressed").innerHTML = keyValue;
+		}
+	</script>
   </body>
 </html>
