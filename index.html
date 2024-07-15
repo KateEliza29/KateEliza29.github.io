@@ -9,16 +9,17 @@
   <body>
 
 	  <input type="text">
+	  <br>
 	  e.key = <p id="keyPressed"></p>
 	  e.code = <p id="keyPressed1"></p>
 	  e.keycode = <p id="keyPressed2"></p>
 	  e.which = <p id="keyPressed3"></p>
 
-	  Ahoy - oninput
+	  Ahoy - oninput 2
 	<script>
 
 
- document.addEventListener('oninput', logKey);
+ document.addEventListener('input', logKey);
     function logKey(e) {
 	document.getElementById("keyPressed").innerHTML = e.key;
 	    document.getElementById("keyPressed1").innerHTML = e.code;
