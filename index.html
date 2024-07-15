@@ -9,15 +9,21 @@
   <body>
 
 	  <input type="text">
-	  <p id="keyPressed"></p>
+	  e.key = <p id="keyPressed"></p>
+	  e.code = <p id="keyPressed1"></p>
+	  e.keycode = <p id="keyPressed2"></p>
+	  e.which = <p id="keyPressed3"></p>
 
-    Hello hello hello
+	  Ahoy
 	<script>
 
 
  document.addEventListener('keydown', logKey);
     function logKey(e) {
 	document.getElementById("keyPressed").innerHTML = e.key;
+	    document.getElementById("keyPressed1").innerHTML = e.code;
+	    document.getElementById("keyPressed2").innerHTML = e.keyCode;
+	    document.getElementById("keyPressed3").innerHTML = e.which;
     }
 	</script>
   </body>
