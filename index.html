@@ -11,13 +11,13 @@
 	  <input type="text">
 	  <p id="keyPressed"></p>
 
-    Hello hello
+    Hello hello hello
 	<script>
 
 
  document.addEventListener('keydown', logKey);
     function logKey(e) {
-	document.getElementById("keyPressed").innerHTML = keyValue;
+	document.getElementById("keyPressed").innerHTML = e.key;
     }
 	</script>
   </body>
