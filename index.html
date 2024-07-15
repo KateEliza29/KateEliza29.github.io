@@ -18,7 +18,7 @@
 	<script>
 
 
- document.addEventListener('keydown', logKey);
+ document.addEventListener('oninput', logKey);
     function logKey(e) {
 	document.getElementById("keyPressed").innerHTML = e.key;
 	    document.getElementById("keyPressed1").innerHTML = e.code;
