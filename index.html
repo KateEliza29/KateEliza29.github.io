@@ -13,23 +13,19 @@
 	  onInput = <p id="onInput"></p>
 	  onChange = <p id="onChange"></p>
 
-	  Input
+	  Input1
 	<script>
 
 
  document.addEventListener('input', logKey);
+document.addEventListener('change', logKey);
     function logKey(e) {
 	let selectStart = e.target.selectionStart;
 	let lastTyped = e.target.value.substr(selectStart, 1);
 	document.getElementById("onInput").innerHTML = lastTyped;
+	    console.log("logKey triggered");
     }
 
- document.addEventListener('change', logKey);
-    function logKey(e) {
-	let selectStart = e.target.selectionStart;
-	let lastTyped = e.target.value.substr(selectStart, 1);
-	document.getElementById("onChange").innerHTML = lastTyped;
-    }
 
 	</script>
   </body>
