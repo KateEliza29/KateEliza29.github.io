@@ -16,7 +16,7 @@
 	  e.which = <p id="keyPressed3"></p>
 	  lastTyped = <p id="keyPressed4"></p>
 
-	  Ahoy - lastTyped4
+	  Ahoy - lastTyped5
 	<script>
 
 
@@ -25,6 +25,8 @@
 	let selectStart = e.target.selectionStart;
 	let lastTyped = e.target.value.substr(selectStart, 1);
 	document.getElementById("keyPressed4").innerHTML = lastTyped;
+	    console.log(selectStart);
+	console.log(lastTyped);
     }
 
 	</script>
