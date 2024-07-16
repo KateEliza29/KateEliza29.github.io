@@ -14,14 +14,16 @@
 	  e.code = <p id="keyPressed1"></p>
 	  e.keycode = <p id="keyPressed2"></p>
 	  e.which = <p id="keyPressed3"></p>
+	  e.target.value = <p id="keyPressed4"></p>
 
 	  Ahoy - oninput 2
 	<script>
 
 
- document.addEventListener('input', logKey);
+ document.addEventListener('keyup', logKey);
     function logKey(e) {
-	document.getElementById("keyPressed").innerHTML = e.key;
+	    document.getElementByID("keyPressed4").innerHTML = e.key.target.value
+		document.getElementById("keyPressed").innerHTML = e.key;
 	    document.getElementById("keyPressed1").innerHTML = e.code;
 	    document.getElementById("keyPressed2").innerHTML = e.keyCode;
 	    document.getElementById("keyPressed3").innerHTML = e.which;
