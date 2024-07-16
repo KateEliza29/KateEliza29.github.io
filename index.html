@@ -13,11 +13,11 @@
 	  onInput = <p id="onInput"></p>
 	  onChange = <p id="onChange"></p>
 
-	  Input7
+	  Input8
 	<script>
 
 
-document.getElementById("textInput").addEventListener('change', logKey);
+document.getElementById("textInput").addEventListener('input', logKey);
     function logKey(e) {
 	let selectStart = e.target.selectionStart;
 	console.log("selectStart = " + selectStart);
