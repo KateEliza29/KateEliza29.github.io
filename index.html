@@ -10,23 +10,25 @@
 
 	  <input type="text">
 	  <br>
-	  e.key = <p id="keyPressed"></p>
-	  e.code = <p id="keyPressed1"></p>
-	  e.keycode = <p id="keyPressed2"></p>
-	  e.which = <p id="keyPressed3"></p>
-	  lastTyped = <p id="keyPressed4"></p>
+	  onInput = <p id="onInput"></p>
+	  onChange = <p id="onChange"></p>
 
-	  Ahoy - lastTyped5
+	  Input
 	<script>
 
 
- document.addEventListener('keypress', logKey);
+ document.addEventListener('input', logKey);
     function logKey(e) {
 	let selectStart = e.target.selectionStart;
-	let lastTyped = e.target.value.substr(selectStart-1, 1);
-	document.getElementById("keyPressed4").innerHTML = lastTyped;
-	    console.log(selectStart);
-	console.log(lastTyped);
+	let lastTyped = e.target.value.substr(selectStart, 1);
+	document.getElementById("onInput").innerHTML = lastTyped;
+    }
+
+ document.addEventListener('change', logKey);
+    function logKey(e) {
+	let selectStart = e.target.selectionStart;
+	let lastTyped = e.target.value.substr(selectStart, 1);
+	document.getElementById("onChange").innerHTML = lastTyped;
     }
 
 	</script>
