@@ -14,20 +14,19 @@
 	  e.code = <p id="keyPressed1"></p>
 	  e.keycode = <p id="keyPressed2"></p>
 	  e.which = <p id="keyPressed3"></p>
-	  e.target.value = <p id="keyPressed4"></p>
+	  lastTyped = <p id="keyPressed4"></p>
 
-	  Ahoy - targetvalue2
+	  Ahoy - lastTyped
 	<script>
 
 
- document.addEventListener('keyUp', logKey);
+ document.addEventListener('keyPress', logKey);
     function logKey(e) {
-	    document.getElementByID("keyPressed4").innerHTML = e.key.target.value
-		document.getElementById("keyPressed").innerHTML = e.key;
-	    document.getElementById("keyPressed1").innerHTML = e.code;
-	    document.getElementById("keyPressed2").innerHTML = e.keyCode;
-	    document.getElementById("keyPressed3").innerHTML = e.which;
+	let selectStart = e.target.selectionStart;
+	let lastTyped = e.target.value.substr(selectStart-1, 1);
+	document.getElementById("keypressed4").innerHTML = lastTyped;
     }
+
 	</script>
   </body>
 </html>
