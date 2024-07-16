@@ -16,11 +16,11 @@
 	  e.which = <p id="keyPressed3"></p>
 	  lastTyped = <p id="keyPressed4"></p>
 
-	  Ahoy - lastTyped
+	  Ahoy - lastTyped2
 	<script>
 
 
- document.addEventListener('keyPress', logKey);
+ document.addEventListener('keypress', logKey);
     function logKey(e) {
 	let selectStart = e.target.selectionStart;
 	let lastTyped = e.target.value.substr(selectStart-1, 1);
