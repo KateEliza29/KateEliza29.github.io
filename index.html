@@ -7,21 +7,19 @@
     <title>Kebbers Kebbers Kebbers</title>
   </head>
   <body>
-
+	<p>Input type=number:</p>
 	  <input type="number" id="textInput">
 	  <br>
-	  onInput = <p id="onInput"></p>
-	  onChange = <p id="onChange"></p>
-
-	  Input11
+	  inputValue = <p id="inputValue"></p>
+	  isNaN = <p id="isNaN"></p>
 	<script>
 
 
 document.getElementById("textInput").addEventListener('input', logKey);
     function logKey(e) {
 	let inputValue = e.target.valueAsNumber;
-	    console.log(e.target.valueAsNumber);
-	    console.log("Is NaN = " + isNaN(inputValue));
+	document.getElementById("inputValue").innerHTML = inputValue;
+	document.getElementById("isNaN").innerHTML = isNaN(inputValue);
     }
 
 
