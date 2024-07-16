@@ -20,6 +20,7 @@
 document.getElementById("textInput").addEventListener('input', logKey);
     function logKey(e) {
 	let inputValue = e.target.valueAsNumber;
+	    console.log(e.target.valueAsNumber);
 	    console.log("Is NaN = " + isNaN(inputValue));
     }
 
