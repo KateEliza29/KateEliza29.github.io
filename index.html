@@ -23,7 +23,7 @@
  document.addEventListener('keypress', logKey);
     function logKey(e) {
 	let selectStart = e.target.selectionStart;
-	let lastTyped = e.target.value.substr(selectStart, 1);
+	let lastTyped = e.target.value.substr(selectStart-1, 1);
 	document.getElementById("keyPressed4").innerHTML = lastTyped;
 	    console.log(selectStart);
 	console.log(lastTyped);
