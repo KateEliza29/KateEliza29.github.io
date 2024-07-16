@@ -13,16 +13,14 @@
 	  onInput = <p id="onInput"></p>
 	  onChange = <p id="onChange"></p>
 
-	  Input8
+	  Input9
 	<script>
 
 
 document.getElementById("textInput").addEventListener('input', logKey);
     function logKey(e) {
-	let selectStart = e.target.selectionStart;
-	console.log("selectStart = " + selectStart);
-	console.log("value = " + e.target.value);
-	
+	let inputValue = e.target.valueAsNumber;
+	    console.log("Is NaN = " + isNaN(inputValue));
     }
 
 
