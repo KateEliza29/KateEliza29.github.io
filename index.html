@@ -13,7 +13,7 @@
 	  onInput = <p id="onInput"></p>
 	  onChange = <p id="onChange"></p>
 
-	  Input5
+	  Input6
 	<script>
 
 
@@ -22,7 +22,7 @@ document.getElementById("textInput").addEventListener('change', logKey);
     function logKey(e) {
 	let selectStart = e.target.selectionStart;
 	console.log("selectStart = " + selectStart);
-	console.log("value = " + e.target.value;
+	console.log("value = " + e.target.value);
 	    document.getElementById("onInput").innerHTML = e.target.value;
 	let lastTyped = e.target.value.substr(selectStart, 1);
 	console.log("lastTyped = " + lastTyped);
