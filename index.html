@@ -16,11 +16,11 @@
 	  e.which = <p id="keyPressed3"></p>
 	  e.target.value = <p id="keyPressed4"></p>
 
-	  Ahoy - targetvalue
+	  Ahoy - targetvalue2
 	<script>
 
 
- document.addEventListener('keyup', logKey);
+ document.addEventListener('keyUp', logKey);
     function logKey(e) {
 	    document.getElementByID("keyPressed4").innerHTML = e.key.target.value
 		document.getElementById("keyPressed").innerHTML = e.key;
