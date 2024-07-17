@@ -7,11 +7,18 @@
     <title>Kebbers Kebbers Kebbers</title>
   </head>
   <body>
+	  <p>NaN functionality</p>>
 	<p>Input type=number:</p>
 	  <input type="number" id="textInput">
 	  <br>
 	  inputValue = <p id="inputValue"></p>
 	  isNaN = <p id="isNaN"></p>
+	  <br>
+	  <br>
+	  <p>input.data</p>
+	  <input type="number" id="textInput2">
+	  <br>
+	  input.Data Value = <p id="inputDataValue"></p>
 	<script>
 
 
@@ -20,6 +27,12 @@ document.getElementById("textInput").addEventListener('input', logKey);
 	let inputValue = e.target.valueAsNumber;
 	document.getElementById("inputValue").innerHTML = inputValue;
 	document.getElementById("isNaN").innerHTML = isNaN(inputValue);
+    }
+
+document.getElementById("textInput2").addEventListener('input', logKey2);
+    function logKey2(e) {
+	let inputDataValue = e.data;
+	document.getElementById("inputDataValue").innerHTML = inputDataValue;
     }
 
 
