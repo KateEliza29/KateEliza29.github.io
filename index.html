@@ -33,6 +33,9 @@ document.getElementById("textInput2").addEventListener('input', logKey2);
     function logKey2(e) {
 	let inputDataValue = e.data;
 	document.getElementById("inputDataValue").innerHTML = inputDataValue;
+	if (!inputDataValue.match(/^[0-9]+$/) {
+	    e.preventDefault();
+	}
     }
 
 
