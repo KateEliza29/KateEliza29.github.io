@@ -28,7 +28,7 @@ let previousValue = null;
     function logKey(e) {
 	let dataValue = e.data;
 	console.log("e.data = " + e.data);
-	if (dataValue == '-' || '+') {
+	if (dataValue == '-' || dataValue == '+') {
 		e.target.value = previousValue;
 		console.log("(if) e.target.value = " + e.target.value);
 	}
