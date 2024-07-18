@@ -19,20 +19,20 @@
 	  <input type="number" id="textInput2">
 	  <br>
 	  input.Data Value = <p id="inputDataValue"></p>
-	  4
+	  5
 	<script>
 
 
 document.getElementById("textInput").addEventListener('input', logKey);
 let previousValue = 0;
     function logKey(e) {
-	let inputValue = e.target.valueAsNumber;
-	    if (isNaN(inputValue)) {
-		e.target.value = previousValue;	
-	    }
-	    else {
-		previousValue = e.target.value;
-	    }
+	let dataValue = e.data;
+	if (e.data == '-' || '+') {
+		e.target.value = previousValue;
+	}
+	else {
+		previousValue = e.target.value;	
+	}
 	document.getElementById("inputValue").innerHTML = inputValue;
 	document.getElementById("isNaN").innerHTML = isNaN(inputValue);
     }
@@ -40,6 +40,17 @@ let previousValue = 0;
 
 document.getElementById("textInput2").addEventListener('input', logKey2);
     function logKey2(e) {
+
+	let inputValue = e.target.valueAsNumber;
+	    if (isNaN(inputValue)) {
+		e.target.value = previousValue;	
+	    }
+	    else {
+		previousValue = e.target.value;
+	    }
+
+
+	    
 	let inputDataValue = e.data;
 	document.getElementById("inputDataValue").innerHTML = inputDataValue;
 	if (!inputDataValue.match(/^[0-9]+$/)) {
