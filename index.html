@@ -19,7 +19,7 @@
 	  <input type="number" id="textInput2">
 	  <br>
 	  input.Data Value = <p id="inputDataValue"></p>
-	  5
+	  6
 	<script>
 
 
@@ -27,14 +27,17 @@ document.getElementById("textInput").addEventListener('input', logKey);
 let previousValue = 0;
     function logKey(e) {
 	let dataValue = e.data;
+	console.log("e.data = " + e.data);
 	if (e.data == '-' || '+') {
 		e.target.value = previousValue;
+		console.log("e.target.value = " + e.target.value);
 	}
 	else {
 		previousValue = e.target.value;	
+		console.log("previous value = " + previousValue);
 	}
-	document.getElementById("inputValue").innerHTML = inputValue;
-	document.getElementById("isNaN").innerHTML = isNaN(inputValue);
+	document.getElementById("inputValue").innerHTML = dataValue;
+	document.getElementById("isNaN").innerHTML = isNaN(dataValue);
     }
 
 
